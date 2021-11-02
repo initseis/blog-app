@@ -1,3 +1,112 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.users {
+  padding: 2rem 3rem;
+  .users-list {
+    list-style-type: none;
+  }
+}
+
+.user {
+  display: flex;
+  margin-bottom: 2rem;
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #000;
+    text-align: center;
+  }
+  .username {
+    margin-left: 2rem;
+    padding: 1rem;
+    border: 4px solid #000;
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+    .name {
+    }
+    .posts-counter {
+      align-self: flex-end;
+    }
+  }
+}
+
+.user-profile {
+  padding: 2rem 3rem;
+  .biography {
+    border: 4px solid #000;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    .biography-title {
+      margin-bottom: 1rem;
+    }
+  }
+  .see-posts {
+    text-align: center;
+    .see-posts-btn {
+      padding: 0.5rem;
+      border: 4px solid #000;
+    }
+  }
+}
+
+.user-posts {
+  padding: 2rem 3rem;
+  .pagination {
+    text-align: center;
+    .pagination-btn {
+      padding: 0.5rem;
+      border: 4px solid #000;
+    }
+  }
+}
+
+.posts-list {
+  .post {
+    margin-bottom: 2rem;
+    .post-details {
+      display: flex;
+      margin-bottom: 0.125rem;
+      flex-direction: column;
+      border: 4px solid #000;
+      padding: 1rem;
+      .post-counters {
+        align-self: flex-end;
+      }
+    }
+    .post-comments {
+      border: 4px solid #000;
+      padding: 1rem;
+    }
+  }
+}
+
+.user-post {
+  padding: 2rem 3rem;
+  .post {
+    padding: 1rem;
+    border: 4px solid #000;
+    margin-bottom: 0.125rem;
+    .title-counters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  }
+  .comments {
+    padding: 1rem;
+    border: 4px solid #000;
+  }
+}
