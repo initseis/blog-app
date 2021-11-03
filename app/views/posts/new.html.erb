@@ -1,0 +1,19 @@
+<section class="add-post-section">
+  <%= form_with model: @post, url: user_create_post_path, method: :post, class: 'add-post-form' do |form| %>
+    <h2>Add Post: </h2>
+    <br>
+    <div>
+      <%= form.label :title %><br>
+      <%= form.text_field :title, :required => true %>
+    </div>
+    <br>
+    <div>
+      <%= form.label :text %><br>
+      <%= form.text_field :text, :required => true %>
+    </div>
+    <br>
+    <div>
+      <%= form.submit "Add post" %>
+    </div>
+  <% end %>
+</section>
