@@ -1,1 +1,24 @@
-<h1>Here is the details of a post of a given user</h1>
+<section class="user-post">
+  <div class="post">
+    <div class="title-counters">
+      <h4><%= @post.title %></h4>
+      <h5>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></h5>
+    </div>
+    <div class="post-description">
+      <p><%= @post.text %></p>
+    </div>
+  </div>
+  <div class="comments">
+    <div class='post-comments'>
+      <ul class='comments-list'>
+        <% @comments.each do |comment| %>
+          <% if comment.author_id == @user.id && comment.post_id == @post.id %>
+            <li class='user-comment'>
+              <p>Username: <%= comment.text %></p>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

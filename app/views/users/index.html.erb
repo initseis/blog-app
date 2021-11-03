@@ -1,1 +1,15 @@
-<h1>Here is the list of users</h1>
+<section class='users'>
+  <ul class='users-list'>
+    <% @users.each do |user| %>
+      <li class='user'>
+        <div class='profile-photo'>photo</div>
+        <div class='username'>
+          <%= link_to user do %>
+            <h2 class='name'><%= user.name %></h2>
+            <h4 class='posts-counter'>Number of posts: <%= user.posts_counter %></h4>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>
