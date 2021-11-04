@@ -27,7 +27,7 @@
         <% @comments.each do |comment| %>
           <% if comment.post_id == @post.id %>
             <li class='user-comment'>
-              <p><%= User.find(comment.author_id).name %>: <%= comment.text %></p>
+              <p><%= comment.author.name %>: <%= comment.text %></p>
             </li>
           <% end %>
         <% end %>
