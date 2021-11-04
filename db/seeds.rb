@@ -14,4 +14,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: "Kevin", bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi iusto obcaecati reiciendis eveniet cumque accusantium? Earum molestias ea, quae asperiores similique temporibus dolor magnam! Adipisci itaque eveniet ut aliquam?")
+User.create(name: "Kevin", bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi iusto obcaecati reiciendis eveniet cumque accusantium? Earum molestias ea, quae asperiores similique temporibus dolor magnam! Adipisci itaque eveniet ut aliquam?", posts_counter: 1)
