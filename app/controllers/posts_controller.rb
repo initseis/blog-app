@@ -26,6 +26,7 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
     if @post.save
+      Post.update_post_counter(User.find(params[:user_id]))
       flash[:notice] = 'Post added'
       redirect_to user_posts_url(@post.author_id)
     else
