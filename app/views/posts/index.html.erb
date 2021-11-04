@@ -1,4 +1,16 @@
 <section class='user-posts'>
+  <% flash.each do |type, msg| %>
+    <% if type == 'notice' %>
+      <div class="flash-notice">
+        <%= msg %>
+      </div>
+    <% end %>
+    <% if type == 'error' %>
+      <div class="flash-error">
+        <%= msg %>
+      </div>
+    <% end %>
+  <% end %>
   <div class='user'>
     <div class='profile-photo'>photo</div>
     <div class='username'>
@@ -29,7 +41,7 @@
             <% @comments.each do |comment| %>
               <% if comment.post_id == post.id %>
                 <li class='user-comment'>
-                  <p><%= User.find(comment.author_id).name %>: <%= comment.text %></p>
+                  <p><%= comment.author.name %>: <%= comment.text %></p>
                 </li>
               <% end %>
             <% end %>
