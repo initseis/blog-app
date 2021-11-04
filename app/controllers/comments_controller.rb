@@ -9,8 +9,10 @@ class CommentsController < ApplicationController
     @comment.author_id = ApplicationController.current_user.id
     @comment.post_id = params[:id]
     if @comment.save
+      flash[:notice] = 'Comment added'
       redirect_to user_post_url(id: params[:id], user_id: params[:user_id])
     else
+      flash[:notice] = 'Comment not added'
       render :new
     end
   end
