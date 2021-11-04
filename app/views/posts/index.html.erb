@@ -6,6 +6,9 @@
       <h4 class='posts-counter'>Number of posts: <%= @user.posts_counter %></h4>
     </div>
   </div>
+  <div class='add-post'>
+    <%= link_to 'Add Post', user_new_post_path(@user), class: 'add-post-btn' %>
+  </div>
   <ul class='posts-list'>
     <% @posts.each do |post| %>
       <li class='post'>
@@ -21,11 +24,12 @@
           </div>
         </div>
         <div class='post-comments'>
+          <h4>Comments:</h4>
           <ul class='comments-list'>
             <% @comments.each do |comment| %>
-              <% if comment.author_id == @user.id && comment.post_id == post.id %>
+              <% if comment.post_id == post.id %>
                 <li class='user-comment'>
-                  <p>Username: <%= comment.text %></p>
+                  <p><%= User.find(comment.author_id).name %>: <%= comment.text %></p>
                 </li>
               <% end %>
             <% end %>

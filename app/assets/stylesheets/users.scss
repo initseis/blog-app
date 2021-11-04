@@ -124,3 +124,58 @@
     border: 4px solid #000;
   }
 }
+
+.add-post {
+  text-align: end;
+  margin-bottom: 1.5rem;
+
+  .add-post-btn {
+    border: 4px solid #1e90ff;
+    padding: 0.125rem;
+  }
+}
+
+.post-interaction {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  .add-comment {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+
+    .add-comment-btn {
+      border: 4px solid #1e90ff;
+      padding: 0.125rem;
+    }
+  }
+
+  .add-like {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+
+    .add-like-btn {
+      border: 2px solid #000;
+      padding: 0.5rem 1rem;
+      background-color: #ffc0cb;
+    }
+  }
+}
+
+.add-post-section {
+  padding: 2rem 4rem;
+
+  .add-post-form {
+    border: 2px solid #000;
+    padding: 1rem;
+  }
+}
+
+.add-comment-section {
+  padding: 2rem 4rem;
+
+  .add-comment-form {
+    border: 2px solid #000;
+    padding: 1rem;
+  }
+}

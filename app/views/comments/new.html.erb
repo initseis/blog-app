@@ -1,0 +1,14 @@
+<section class="add-comment-section">
+  <%= form_with model: @comment, url: user_create_post_comment_path, method: :post, class: 'add-comment-form' do |form| %>
+    <h2>Add Comment: </h2>
+    <br>
+    <div>
+      <%= form.label :text, "Comment:" %><br>
+      <%= form.text_field :text, :required => true %>
+    </div>
+    <br>
+    <div>
+      <%= form.submit "Add comment" %>
+    </div>
+  <% end %>
+</section>
