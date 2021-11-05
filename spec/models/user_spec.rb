@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
 
   it 'posts_counter should be greater than zero' do
     @user.posts_counter = 0
-    expect(@user).to_not be_valid
+    expect(@user).to be_valid
   end
 
   it 'most_recent_posts method should return zero posts' do
