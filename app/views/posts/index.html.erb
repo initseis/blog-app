@@ -1,16 +1,4 @@
 <section class='user-posts'>
-  <% flash.each do |type, msg| %>
-    <% if type == 'notice' %>
-      <div class="flash-notice">
-        <%= msg %>
-      </div>
-    <% end %>
-    <% if type == 'error' %>
-      <div class="flash-error">
-        <%= msg %>
-      </div>
-    <% end %>
-  <% end %>
   <div class='user'>
     <div class='profile-photo'>photo</div>
     <div class='username'>
