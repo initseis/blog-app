@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :update_interactions
+  before_action :authenticate_user!
 
   def index
     @user = User.find(params[:user_id])
