@@ -1,7 +1,9 @@
 class LikesController < ApplicationController
+  before_action :authenticate_user!
+  
   def create
     @like = Like.new
-    @like.author_id = ApplicationController.current_user.id
+    @like.author_id = current_user.id
     @like.post_id = params[:id]
     @post = Post.find(params[:id])
     if @like.save
