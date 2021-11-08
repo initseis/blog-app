@@ -23,11 +23,11 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.title = params[:post][:title]
     @post.text = params[:post][:text]
-    @post.author_id = params[:user_id]
+    @post.author_id = current_user.id
     @post.comments_counter = 0
     @post.likes_counter = 0
     if @post.save
-      Post.update_post_counter(User.find(params[:user_id]))
+      Post.update_post_counter(User.find(current_user.id))
       flash[:notice] = 'Post added'
       redirect_to user_posts_url(@post.author_id)
     else
