@@ -1,16 +1,4 @@
 <section class='user-posts'>
-  <% flash.each do |type, msg| %>
-    <% if type == 'notice' %>
-      <div class="flash-notice">
-        <%= msg %>
-      </div>
-    <% end %>
-    <% if type == 'error' %>
-      <div class="flash-error">
-        <%= msg %>
-      </div>
-    <% end %>
-  <% end %>
   <div class='user'>
     <div class='profile-photo'>photo</div>
     <div class='username'>
@@ -18,9 +6,11 @@
       <h4 class='posts-counter'>Number of posts: <%= @user.posts_counter %></h4>
     </div>
   </div>
-  <div class='add-post'>
-    <%= link_to 'Add Post', user_new_post_path(@user), class: 'add-post-btn' %>
-  </div>
+  <% if current_user.id == @user.id %>
+    <div class='add-post'>
+      <%= link_to 'Add Post', user_new_post_path(@user), class: 'add-post-btn' %>
+    </div>
+  <% end %>
   <ul class='posts-list'>
     <% @posts.each do |post| %>
       <li class='post'>

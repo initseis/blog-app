@@ -14,9 +14,11 @@
       <%= @user.bio %>
     </div>
   </div>
-  <div class='add-post'>
-    <%= link_to 'Add Post', user_new_post_path(@user), class: 'add-post-btn' %>
-  </div>
+  <% if current_user.id == @user.id %>
+    <div class='add-post'>
+      <%= link_to 'Add Post', user_new_post_path(@user), class: 'add-post-btn' %>
+    </div>
+  <% end %>
   <ul class='posts-list'>
     <% @posts.each do |post| %>
       <li class='post'>

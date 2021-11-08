@@ -179,3 +179,72 @@
     padding: 1rem;
   }
 }
+
+.user-signed-in-options {
+  margin: 1rem 0 0 0;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+
+  .logout-btn,
+  .edit-user-btn {
+    padding: 0.5rem 1rem;
+    background-color: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+}
+
+.sign-up-section {
+  padding: 2rem 4rem;
+
+  .field {
+    margin: 0 0 1rem 0;
+  }
+
+  .sign-up-btn {
+    border: 4px solid #1e90ff;
+    padding: 0.125rem;
+  }
+
+  .sign-up-update-btn {
+    border: 4px solid #1e90ff;
+    padding: 0.125rem;
+  }
+
+  .sign-up-cancel-btn {
+    border: 4px solid #1e90ff;
+    padding: 0.125rem;
+  }
+}
+
+.sign-in-section {
+  padding: 2rem 6rem;
+
+  .field {
+    .email-field {
+      margin: 0 0 1rem 0;
+      padding: 0.25rem;
+      width: 100%;
+    }
+
+    .password-field {
+      margin: 0 0 1rem 0;
+      padding: 0.25rem;
+      width: 100%;
+    }
+  }
+
+  .sign-in-btn {
+    border: 4px solid #1e90ff;
+    background: #1e90ff;
+    padding: 0.125rem;
+    border-radius: 2px;
+    color: #fff;
+    width: 100%;
+  }
+}

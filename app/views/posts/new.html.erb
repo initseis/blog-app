@@ -1,16 +1,4 @@
 <section class="add-post-section">
-  <% flash.each do |type, msg| %>
-    <% if type == 'notice' %>
-      <div class="flash-notice">
-        <%= msg %>
-      </div>
-    <% end %>
-    <% if type == 'error' %>
-      <div class="flash-error">
-        <%= msg %>
-      </div>
-    <% end %>
-  <% end %>
   <%= form_with model: @post, url: user_create_post_path, method: :post, class: 'add-post-form' do |form| %>
     <h2>Add Post: </h2>
     <br>

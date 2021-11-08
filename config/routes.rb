@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/users/:user_id/posts", to: "posts#index", as: "user_posts"
   post "/users/:user_id/posts", to: "posts#create", as: "user_create_post"

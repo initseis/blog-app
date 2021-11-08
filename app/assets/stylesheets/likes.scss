@@ -3,20 +3,23 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .flash-notice {
-  background-color: #1e90ff;
+  margin: 1rem 4rem;
+  padding: 1rem 0;
+  background-color: #17d7a0;
   color: #fff;
-  border: 4px solid #1e90ff;
-  width: 5rem;
+  border: 4px solid #17d7a0;
+  width: auto;
   text-align: center;
   border-radius: 0.25rem;
-  margin-bottom: 1rem;
 }
 
 .flash-error {
-  background-color: #ed0600;
+  margin: 1rem 4rem;
+  padding: 1rem 0;
+  background-color: #c85c5c;
   color: #fff;
-  border: 4px solid #ed0600;
-  width: 5rem;
+  border: 4px solid #c85c5c;
+  width: auto;
   text-align: center;
   border-radius: 0.25rem;
   margin-bottom: 1rem;

@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @comment = Comment.new
   end
@@ -6,7 +8,7 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new
     @comment.text = params[:comment][:text]
-    @comment.author_id = ApplicationController.current_user.id
+    @comment.author_id = current_user.id
     @comment.post_id = params[:id]
     if @comment.save
       flash[:notice] = 'Comment added'
