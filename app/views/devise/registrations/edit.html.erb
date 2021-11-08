@@ -24,6 +24,22 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name" %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.url_field :photo, autocomplete: "photo" %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio, autocomplete: "bio", size: "70x5" %>
+  </div>
+  <div class="field">
+    <%= f.label :posts_counter %><br />
+    <%= f.number_field :posts_counter, value: 0 %>
+  </div>
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
