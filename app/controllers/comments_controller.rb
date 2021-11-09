@@ -18,6 +18,18 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    @comment = @post.find(params[:comment_id])
+    if @comment.destroy
+      Like.update_likes_counter(@post)
+      Comment.update_comments_counter(@post)
+      flash[:notice] = 'Comment deleted succesfully'
+    else
+      flash[:error] = 'Comment not deleted'
+    end
+  end
+
   private
 
   def comment_params
