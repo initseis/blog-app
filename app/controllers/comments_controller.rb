@@ -20,7 +20,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    @comment = @post.find(params[:comment_id])
+    @comment = @post.comments.find(params[:comment_id])
     if @comment.destroy
       Like.update_likes_counter(@post)
       Comment.update_comments_counter(@post)
@@ -28,6 +28,7 @@ class CommentsController < ApplicationController
     else
       flash[:error] = 'Comment not deleted'
     end
+    redirect_back(fallback_location: root_path)
   end
 
   private
