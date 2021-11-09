@@ -32,6 +32,11 @@
           <div class='post-counters'>
             <h5>Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></h5>
           </div>
+          <% if can? :destroy, post %>
+            <div class='delete-post'>
+              <%= button_to "Delete", user_destroy_post_path(user_id: @user, id: post.id), method: :delete, class: 'delete-post-btn'  %>
+            </div>
+          <% end %>
         </div>
       </li>
     <% end %>
