@@ -14,4 +14,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: "Kevin", bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis modi iusto obcaecati reiciendis eveniet cumque accusantium? Earum molestias ea, quae asperiores similique temporibus dolor magnam! Adipisci itaque eveniet ut aliquam?", posts_counter: 0)
+User.create(name: 'Kevin', photo: 'http://lorempixel.com/100/100/',
+                              bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut officia repudi.',
+                              posts_counter: 0, email: 'kevin@gmail.com', password: '234234', confirmed_at: Time.now)
