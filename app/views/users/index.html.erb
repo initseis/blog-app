@@ -2,7 +2,9 @@
   <ul class='users-list'>
     <% @users.each do |user| %>
       <li class='user'>
-        <div class='profile-photo'>photo</div>
+        <div class='profile-photo'>
+          <img class='profile-photo-img' src=<%= user.photo %> alt='photo' width='100' height='100'>
+        </div>
         <div class='username'>
           <%= link_to user do %>
             <h2 class='name'><%= user.name %></h2>
