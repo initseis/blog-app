@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post "/users/:user_id/posts", to: "posts#create", as: "user_create_post"
   get "/users/:user_id/posts/new", to: "posts#new", as: "user_new_post"
   get "/users/:user_id/posts/:id", to: "posts#show", as: "user_post"
+  delete "/users/:user_id/posts/:id", to: "posts#destroy", as: "user_destroy_post"
+  delete "/users/:user_id/posts/:id/:comment_id", to: "comments#destroy", as: "user_destroy_post_comment"
   post "/users/:user_id/posts/:id", to: "comments#create", as: "user_create_post_comment"
   get "/users/:user_id/posts/:id/new", to: "comments#new", as: "user_new_post_comment"
   post "/users/:user_id/posts/:id/like", to: "likes#create", as: "user_create_post_like"

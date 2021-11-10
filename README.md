@@ -67,6 +67,18 @@ The Blog app is a classic example of a blog website. You can create a fully func
 - Twitter: [@sevinchek](https://twitter.com/sevinchek)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/sevinchek)
 
+👤 **Sebastián Muñoz**
+
+- GitHub: [@smunozmo](https://github.com/smunozmo)
+- Twitter: [@smunozmo](https://twitter.com/smunozmo)
+- Linkedin: [Sebastián Muñoz](https://www.linkedin.com/in/smunozmo/)
+
+👤 **Mario Chois**
+
+- GitHub: [@githubhandle](https://github.com/hunter4466/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mario-chois-5a13b6b6/)
+- Angelist: [@angelist](https://angel.co/u/mario-chois)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!

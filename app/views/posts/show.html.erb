@@ -7,6 +7,11 @@
     <div class="post-description">
       <p><%= @post.text %></p>
     </div>
+    <% if can? :destroy, @post %>
+      <div class='delete-post'>
+        <%= button_to "Delete", user_destroy_post_path(user_id: @user, id: @post.id), method: :delete, class: 'delete-post-btn'  %>
+      </div>
+    <% end %>
   </div>
   <div class="comments">
     <div class='post-comments'>
@@ -16,6 +21,11 @@
           <% if comment.post_id == @post.id %>
             <li class='user-comment'>
               <p><%= comment.author.name %>: <%= comment.text %></p>
+              <% if can? :destroy, comment %>
+                <div class='delete-comment'>
+                  <%= button_to "Delete", user_destroy_post_comment_path(user_id: @user, id: @post.id, comment_id: comment.id), method: :delete, class: 'delete-comment-btn'  %>
+                </div>
+              <% end %>
             </li>
           <% end %>
         <% end %>

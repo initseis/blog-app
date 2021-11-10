@@ -248,3 +248,34 @@
     width: 100%;
   }
 }
+
+.delete-post-btn {
+  background-color: #c85c5c;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #c85c5c;
+  border-radius: 2px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.user-comment {
+  display: flex;
+  align-items: center;
+
+  .delete-comment {
+    margin-left: 1rem;
+
+    .delete-comment-btn {
+      color: #c85c5c;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      font-weight: 500;
+      transition: ease-in-out 0.2s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
