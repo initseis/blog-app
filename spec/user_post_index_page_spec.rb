@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'in user post index page', type: :system do
+RSpec.describe 'in user post index page', js: true, type: :system do
   before(:all) do
     @first_user = User.create(name: 'Kevin', photo: 'http://lorempixel.com/100/100/',
                               bio: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut officia repudi.',
