@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+ails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/users/:user_id/posts", to: "posts#index", as: "user_posts"
@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post "/users/:user_id/posts/:id/like", to: "likes#create", as: "user_create_post_like"
   get "/users", to: "users#index", as: "users"
   get "/users/:id", to: "users#show", as: "user"
+  post "auth/login", to: "authentication#authenticate"
   root to: "users#index"
 end
