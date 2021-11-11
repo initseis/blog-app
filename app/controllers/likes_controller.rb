@@ -1,6 +1,4 @@
 class LikesController < ApplicationController
-  before_action :authenticate_user!
-
   def create
     @like = Like.new
     @like.author_id = current_user.id

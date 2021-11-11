@@ -1,23 +1,22 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
-
   def new
     @comment = Comment.new
   end
-
   def create
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id
     @comment.post_id = params[:id]
     if @comment.save
       flash[:notice] = 'Comment added'
-      redirect_to user_post_url(id: params[:id], user_id: params[:user_id])
+      respond_to do |format|
+        format.html { redirect_to user_post_url(id: params[:id], user_id: params[:user_id]) }
+        format.json { render json: @comment }
+      end
     else
       flash[:notice] = 'Comment not added'
       render :new
     end
   end
-
   def destroy
     @post = Post.find(params[:id])
     @comment = @post.comments.find(params[:comment_id])
@@ -30,9 +29,7 @@ class CommentsController < ApplicationController
     end
     redirect_back(fallback_location: root_path)
   end
-
   private
-
   def comment_params
     params.require(:comment).permit(:text)
   end
