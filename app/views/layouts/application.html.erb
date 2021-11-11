@@ -26,6 +26,11 @@
           <%= msg %>
         </div>
       <% end %>
+      <% if type == 'alert' %>
+        <div class="flash-error">
+          <%= msg %>
+        </div>
+      <% end %>
     <% end %>
     <%= yield %>
   </body>

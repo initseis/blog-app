@@ -1,6 +1,8 @@
 <section class='user-posts'>
   <div class='user'>
-    <div class='profile-photo'>photo</div>
+    <div class='profile-photo'>
+      <img class='profile-photo-img' src=<%= @user.photo %> alt='photo' width='100' height='100'>
+    </div>
     <div class='username'>
       <h2 class='name'><%= @user.name %></h2>
       <h4 class='posts-counter'>Number of posts: <%= @user.posts_counter %></h4>

@@ -25,8 +25,13 @@
   .profile-photo {
     width: 100px;
     height: 100px;
-    border: 4px solid #000;
     text-align: center;
+    border: 2px solid #1e90ff;
+
+    .profile-photo-img {
+      border-radius: 2px;
+      width: 100px;
+    }
   }
 
   .username {
