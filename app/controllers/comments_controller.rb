@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
+
   def create
     @comment = Comment.new(comment_params)
     @comment.author_id = current_user.id
@@ -17,6 +18,7 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+
   def destroy
     @post = Post.find(params[:id])
     @comment = @post.comments.find(params[:comment_id])
@@ -29,7 +31,9 @@ class CommentsController < ApplicationController
     end
     redirect_back(fallback_location: root_path)
   end
+
   private
+
   def comment_params
     params.require(:comment).permit(:text)
   end

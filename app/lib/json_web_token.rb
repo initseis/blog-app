@@ -7,6 +7,7 @@ class JsonWebToken
     # sign token with application secret
     JWT.encode(payload, HMAC_SECRET)
   end
+
   def self.decode(token)
     # get payload; first index in decoded Array
     body = JWT.decode(token, HMAC_SECRET)[0]
