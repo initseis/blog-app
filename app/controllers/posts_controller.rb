@@ -1,17 +1,23 @@
 class PostsController < ApplicationController
   before_action :update_interactions
-  before_action :authenticate_user!
-
   def index
     @user = User.find(params[:user_id])
     @posts = Post.joins(:author).where(author: { id: @user.id }).order(created_at: :desc)
     @comments = Comment.includes(:author).order(created_at: :desc)
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+    end
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     @comments = Comment.includes(:author).order(created_at: :desc)
+    respond_to do |format|
+      format.html
+      format.json { render json: @comments }
+    end
   end
 
   def new

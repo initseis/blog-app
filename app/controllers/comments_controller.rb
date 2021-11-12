@@ -1,6 +1,4 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
-
   def new
     @comment = Comment.new
   end
@@ -11,7 +9,10 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:id]
     if @comment.save
       flash[:notice] = 'Comment added'
-      redirect_to user_post_url(id: params[:id], user_id: params[:user_id])
+      respond_to do |format|
+        format.html { redirect_to user_post_url(id: params[:id], user_id: params[:user_id]) }
+        format.json { render json: @comment }
+      end
     else
       flash[:notice] = 'Comment not added'
       render :new
